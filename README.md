@@ -126,14 +126,13 @@ Runs at: http://localhost:5173
 |POST   |	/api/wallet-balance | Get wallet SOL balance    |
 
 
-You can also visit Solscan to view the account details
-Get your account address by 
+You can also visit Solscan to view the account details. Get your account address by:
 
 ```bash
 solana address
 ```
 
-https://solscan.io/account/YOUR_ACCOUNT_ADDRESS?cluster=devnet
+Visit https://solscan.io/account/YOUR_ACCOUNT_ADDRESS?cluster=devnet
 
 ## 📦 Future Improvements
 
