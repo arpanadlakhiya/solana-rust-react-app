@@ -266,12 +266,12 @@ main() {
     local os
     os=$(detect_os)
 
-    # echo "Installing dependencies..."
+    echo "Installing dependencies..."
 
     # install_dependencies "$os"
     # install_rust
-    # install_solana_cli "$os"
-    # install_anchor_cli
+    install_solana_cli "$os"
+    install_anchor_cli
     # install_nvm_and_node
     # install_yarn
 
@@ -279,7 +279,7 @@ main() {
 
     print_versions
 
-    # echo "Installation complete. Please restart your terminal to apply all changes."
+    echo "Installation complete. Please restart your terminal to apply all changes."
 
     echo "Building Solana program..."
     cd solana-program
