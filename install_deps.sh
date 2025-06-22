@@ -1,5 +1,3 @@
-#!/bin/bash
-
 #!/usr/bin/env bash
 set -euo pipefail
 
@@ -266,8 +264,6 @@ main() {
     local os
     os=$(detect_os)
 
-    echo "Installing dependencies..."
-
     # install_dependencies "$os"
     install_rust
     install_solana_cli "$os"
@@ -280,16 +276,6 @@ main() {
     print_versions
 
     echo "Installation complete. Please restart your terminal to apply all changes."
-
-    echo "Building Solana program..."
-    cd solana-program
-    npm install
-    anchor build
-
-    echo "Building backend API..."
-    cd ../backend-api
-    npm install
-    npm run build
 }
 
 main "$@"
