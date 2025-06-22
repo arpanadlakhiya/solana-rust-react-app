@@ -208,7 +208,13 @@ install_yarn() {
     fi
 
     if command -v yarn >/dev/null 2>&1; then
-        yarn --version
+        yarnst
+    # install_solana_cli "$os"
+    # install_anchor_cli
+    # install_nvm_and_node
+    # install_yarn
+
+    # ensure_nvm --version
     else
         log_error "Yarn installation failed."
     fi
@@ -269,13 +275,13 @@ main() {
     echo "Installing dependencies..."
 
     # install_dependencies "$os"
-    # install_rust
+    install_rust
     install_solana_cli "$os"
     install_anchor_cli
-    # install_nvm_and_node
-    # install_yarn
+    install_nvm_and_node
+    install_yarn
 
-    # ensure_nvm_in_shell
+    ensure_nvm_in_shell
 
     print_versions
 
